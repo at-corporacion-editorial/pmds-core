@@ -1,8 +1,3 @@
-# PMDS Core
-
-**Núcleo ejecutable y arquitectura middleware del Protocolo de Mitigación de Degradación Sintética (PMDS).**
-
-Implementación modular en Python de los sistemas de sincronización semántica, filtrado hermenéutico (FHDC) y soberanía neuro-literaria (SNL) bajo la regla de control contextual 75/25 para Modelos de Lenguaje.
 
 ---
 # ==============================================================================
@@ -83,7 +78,7 @@ def PMDS_Unified_Pipeline(raw_prompt: str, session_delta_t: float, domain_matrix
     Pipeline maestro del Protocolo de Mitigación de Degradación Sintética (PMDS).
     Estructura de ejecución en el borde bajo la regla de contexto 75/25.
     """
-    # Fase 1: Preservación de Diversidad Léxica (SNL)
+   ``` # Fase 1: Preservación de Diversidad Léxica (SNL)
     sovereign_input = SNL_Sovereignty_Filter(raw_prompt, entropy_threshold=0.75)
 
     # Fase 2: Descomposición Ontológica de Entrada (FHDC - Capa A)
