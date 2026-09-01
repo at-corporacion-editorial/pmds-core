@@ -1,10 +1,11 @@
 ==============================================================================
+"""
 Protocolo de Mitigación de Degradación Sintética (PMDS)
 Implementación de Referencia Middleware en el Borde
 
-Autor: Alejandro Torres (A.T. Corporación Editorial)
+Autor: Alexander Torres (A.T. Corporación Editorial)
 ORCID: 0009-0008-6832-3814
-Licencia: Licencia Apache 2.0
+Licencia:Apache 2.0
 ==============================================================================
 """
 
