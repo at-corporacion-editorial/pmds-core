@@ -15,11 +15,18 @@ Implementación modular en Python de los sistemas de sincronización semántica,
 
 ## Estructura del Pipeline Unificado
 
-Estructura del Ducto Unificado
-class ModelCollapseWarning(Exception): """Excepción emitida al detectar deriva entrópica crítica en runtime.""" pass
+class ModelCollapseWarning(Exception):
+    """Excepción emitida al detectar deriva entrópica crítica en runtime."""
+    pass
 
-def PMDS_Unified_Pipeline(raw_prompt: str, session_delta_t: float, domain_matrix: dict) -> str: """ Pipeline maestro del Protocolo de Mitigación de Degradación Sintética (PMDS). Estructura de ejecución en el borde bajo la regla 75/25. """ # Fase 1: Preservación de Diversidad Léxica (SNL) soberano_input = SNL_Sovereignty_Filter(raw_prompt, umbral_de_entropía=0,75)
-
+def PMDS_Unified_Pipeline(raw_prompt: str, session_delta_t: float, domain_matrix: dict) -> str:
+    """
+    Pipeline maestro del Protocolo de Mitigación de Degradación Sintética (PMDS).
+    Estructura de ejecución en el borde bajo la regla 75/25.
+    """
+    # Fase 1: Preservación de Diversidad Léxica (SNL)
+    sovereign_input = SNL_Sovereignty_Filter(raw_prompt, entropy_threshold=0.75)
+    
 # Fase 1: Preservación de Diversidad Léxica (SNL)
 sovereign_input = SNL_Sovereignty_Filter(raw_prompt, entropy_threshold=0.75)
     
