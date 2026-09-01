@@ -15,8 +15,9 @@ Implementación modular en Python de los sistemas de sincronización semántica,
 
 ## Estructura del Pipeline Unificado
 
-```class ModelCollapseWarning(Exception):
-    """Excepción emitida al detectar deriva entrópica crítica en runtime."""
+```(class ModelCollapseWarning(Exception):
+
+ """Excepción emitida al detectar deriva entrópica crítica en runtime."""
     pass
 
 def PMDS_Unified_Pipeline(raw_prompt: str, session_delta_t: float, domain_matrix: dict) -> str:
