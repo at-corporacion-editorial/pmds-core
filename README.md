@@ -23,8 +23,8 @@ def PMDS_Unified_Pipeline(raw_prompt: str, session_delta_t: float, domain_matrix
     """
     Pipeline maestro del Protocolo de Mitigación de Degradación Sintética (PMDS).
     Estructura de ejecución en el borde bajo la regla 75/25.
-    """
-    ---
+    
+    
     # Fase 1: Preservación de Diversidad Léxica (SNL)
     sovereign_input = SNL_Sovereignty_Filter(raw_prompt, entropy_threshold=0.75)
     
