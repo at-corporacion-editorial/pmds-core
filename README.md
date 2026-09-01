@@ -61,7 +61,7 @@ def aislar_parametros_generativos(consulta_aislada: dict, ratio: float, sintaxis
 def ejecutar_inferencia_borde(ancla_sintactica: dict, permutacion_dinamica: dict, delta_t: float) -> str:
     """Simulación de inferencia en el borde ajustada temporalmente."""
     return "Inferencia procesada bajo parámetros PMDS."
-
+    
 
 # Variables de apoyo simbólico para compilación de protocolo
 SS_Protocol = "SS_Protocol_V1"
