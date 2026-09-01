@@ -15,7 +15,8 @@ Implementación modular en Python de los sistemas de sincronización semántica,
 
 ## Estructura del Pipeline Unificado
 
-```python
+
+ 
 class ModelCollapseWarning(Exception):
     """Excepción emitida al detectar deriva entrópica crítica en runtime."""
     pass
@@ -46,7 +47,7 @@ def PMDS_Unified_Pipeline(raw_prompt: str, session_delta_t: float, domain_matrix
     return validated_output
 
 
-from dataclasses import dataclass
+    from dataclasses import dataclass
 
 @dataclass
 class SNLExicalParameters:
@@ -69,7 +70,6 @@ def SNL_Sovereignty_Filter(raw_prompt: str, entropy_threshold: float = 0.75) -> 
     }
     return payload
 
-
 def FHDC_Hermeneutic_Disjunction(raw_input: dict) -> dict:
     # Capa A: Aislamiento hermenéutico del estímulo
     return {"isolated_vector": raw_input, "status": "decomposed"}
@@ -81,4 +81,5 @@ def FHDC_Double_Blind_Verification(model_output: str, domain_matrix: dict) -> ob
             return True 
     return ValidationResult()
 
-
+    
+    
