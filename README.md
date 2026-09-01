@@ -1,4 +1,3 @@
-==============================================================================
 Protocolo de Mitigación de Degradación Sintética (PMDS)
 Implementación de Referencia Middleware en el Borde
 
