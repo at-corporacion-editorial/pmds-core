@@ -1,7 +1,7 @@
 # PMDS: Protocolo de Mitigación de Degradación Sintética
 
 <p align="left">
-  <a href="https://doi.org/10.5281/zenodo.XXXXXXX"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.XXXXXXX-blue.svg" alt="DOI"></a>
+  <a href="https://doi.org/10.5281/zenodo.22226756"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.XXXXXXX-blue.svg" alt="DOI"></a>
   <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-green.svg" alt="License: Apache 2.0"></a>
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/Docs-CC_BY_4.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
   <a href="https://orcid.org/0009-0008-6832-3814"><img src="https://img.shields.io/badge/ORCID-0009--0008--6832--3814-brightgreen.svg" alt="ORCID"></a>
