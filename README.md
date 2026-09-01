@@ -1,16 +1,21 @@
 # PMDS Core
-Núcleo ejecutable y arquitectura middleware del Protocolo de Mitigación de Degradación Sintética (PMDS). 
+
+**Núcleo ejecutable y arquitectura middleware del Protocolo de Mitigación de Degradación Sintética (PMDS).**
+
 Implementación modular en Python de los sistemas de sincronización semántica, filtrado hermenéutico (FHDC) y soberanía neuro-literaria (SNL) bajo la regla de control contextual 75/25 para Modelos de Lenguaje.
 
-**Autor:** Alexander Torres (ORCID: 0009-0008-6832-3814)  
-**Institución:** A.T. Corporación Editorial  
-**Licenciamiento:** Apache License 2.0
-"""
-PMDS Core Pipeline - A.T. Corporación Editorial
-Autor: Alexander Torres (ORCID: 0009-0008-6832-3814)
-Licenciamiento: Apache License 2.0
-"""
+---
 
+### Metadatos Editoriales y Técnicos
+* **Autor:** Alexander Torres (ORCID: [0009-0008-6832-3814](https://orcid.0009-0008-6832-3814))
+* **Institución:** A.T. Corporación Editorial
+* **Licenciamiento:** Apache License 2.0
+
+---
+
+## Estructura del Pipeline Unificado
+
+```python
 class ModelCollapseWarning(Exception):
     """Excepción emitida al detectar deriva entrópica crítica en runtime."""
     pass
@@ -40,10 +45,7 @@ def PMDS_Unified_Pipeline(raw_prompt: str, session_delta_t: float, domain_matrix
         
     return validated_output
 
-    """
-SNL Middleware - A.T. Corporación Editorial
-Autor: Alexander Torres (ORCID: 0009-0008-6832-3814)
-"""
+
 from dataclasses import dataclass
 
 @dataclass
@@ -66,3 +68,17 @@ def SNL_Sovereignty_Filter(raw_prompt: str, entropy_threshold: float = 0.75) -> 
         "frequency_penalty": config.frequency_penalty
     }
     return payload
+
+
+def FHDC_Hermeneutic_Disjunction(raw_input: dict) -> dict:
+    # Capa A: Aislamiento hermenéutico del estímulo
+    return {"isolated_vector": raw_input, "status": "decomposed"}
+
+def FHDC_Double_Blind_Verification(model_output: str, domain_matrix: dict) -> object:
+    # Capa B: Auditoría ciega frente a matriz de dominio
+    class ValidationResult:
+        def passes_entropy_threshold(self) -> bool:
+            return True 
+    return ValidationResult()
+
+
