@@ -5,55 +5,54 @@ Autor: Alexander Torres (A.T. Corporación Editorial)
 ORCID: 0009-0008-6832-3814
 Licencia:Apache 2.0
 ==============================================================================
-
-
 from dataclasses import dataclass
 
-class ModelCollapseWarning(Exception):
+class AlertaColapsoModelo(Exception):
     """Excepción emitida al detectar deriva entrópica crítica en runtime."""
     pass
 
 @dataclass
-class SNLExicalParameters:
+class ParametrosLexicosSNL:
     """Configuración de parámetros léxicos para el filtro de Soberanía Neuro-Literaria."""
-    presence_penalty: float = 0.65
-    frequency_penalty: float = 0.40
-    temperature: float = 0.75
+    presencia_penalty: float = 0.65
+    frecuencia_penalty: float = 0.40
+    temperatura: float = 0.75
     top_p: float = 0.88
 
-def SNL_Sovereignty_Filter(raw_prompt: str, entropy_threshold: float = 0.75) -> dict:
+def filtro_soberania_snl(prompt_crudo: str, umbral_entropia: float = 0.75) -> dict:
     """Aplica restricciones estilísticas y ajusta parámetros de muestreo según diversidad léxica."""
-    config = SNLExicalParameters()
+    config = ParametrosLexicosSNL()
     return {
-        "prompt": raw_prompt,
-        "temperature": config.temperature,
+        "prompt": prompt_crudo,
+        "temperature": config.temperatura,
         "top_p": config.top_p,
-        "presence_penalty": config.presence_penalty,
-        "frequency_penalty": config.frequency_penalty
+        "presence_penalty": config.presencia_penalty,
+        "frequency_penalty": config.frecuencia_penalty
     }
 
-def FHDC_Hermeneutic_Disjunction(raw_input: dict) -> dict:
+def disyuncion_hermeneutica_fhdc(entrada_cruda: dict) -> dict:
     """Capa A: Aislamiento hermenéutico del estímulo de entrada."""
-    return {"isolated_vector": raw_input, "status": "decomposed"}
+    return {"vector_aislado": entrada_cruda, "status": "descompuesto"}
 
-def FHDC_Double_Blind_Verification(model_output: str, domain_matrix: dict) -> object:
+def verificacion_ciega_fhdc(salida_modelo: str, matriz_dominio: dict) -> object:
     """Capa B: Auditoría ciega frente a matriz de dominio normativo."""
-    class ValidationResult:
-        def passes_entropy_threshold(self) -> bool:
-            return True
-    return ValidationResult()
+    class ResultadoValidacion:
+        def pasa_umbral_entropia(self) -> bool:
+            return True 
+    return ResultadoValidacion()
 
-def load_authoritative_constraints(ratio: float, protocol: str) -> dict:
+def cargar_restricciones_autoritativas(ratio: float, protocolo: str) -> dict:
     """Carga de restricciones rígidas de dominio (75% de anclaje sintáctico)."""
-    return {"ratio": ratio, "protocol": str(protocol)}
+    return {"ratio": ratio, "protocolo": str(protocolo)}
 
-def isolate_generative_parameters(isolated_query: dict, ratio: float, syntax: str) -> dict:
+def aislar_parametros_generativos(consulta_aislada: dict, ratio: float, sintaxis: str) -> dict:
     """Aislamiento paramétrico (25% de permutación dinámica acotada)."""
-    return {"query": isolated_query, "ratio": ratio, "syntax": str(syntax)}
+    return {"consulta": consulta_aislada, "ratio": ratio, "sintaxis": str(sintaxis)}
 
-def execute_edge_inference(syntactic_anchor: dict, dynamic_permutation: dict, delta_t: float) -> str:
+def ejecutar_inferencia_borde(ancla_sintactica: dict, permutacion_dinamica: dict, delta_t: float) -> str:
     """Simulación de inferencia en el borde ajustada temporalmente."""
     return "Inferencia procesada bajo parámetros PMDS."
+
 
 # Variables de apoyo simbólico para compilación de protocolo
 SS_Protocol = "SS_Protocol_V1"
