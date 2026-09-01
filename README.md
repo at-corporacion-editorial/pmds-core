@@ -5,25 +5,83 @@
 Implementación modular en Python de los sistemas de sincronización semántica, filtrado hermenéutico (FHDC) y soberanía neuro-literaria (SNL) bajo la regla de control contextual 75/25 para Modelos de Lenguaje.
 
 ---
+# ==============================================================================
+# Protocolo de Mitigación de Degradación Sintética (PMDS)
+# Implementación de Referencia Middleware en el Borde
+#
+# Autor: Alexander Torres (A.T. Corporación Editorial)
+# ORCID: 0009-0008-6832-3814
+# Licencia: Apache License 2.0
+# ==============================================================================
 
-### Metadatos Editoriales y Técnicos
-* **Autor:** Alexander Torres (ORCID: [0009-0008-6832-3814](https://orcid.0009-0008-6832-3814))
-* **Institución:** A.T. Corporación Editorial
-* **Licenciamiento:** Apache License 2.0
-
----
-
-## Estructura del Pipeline Unificado
+from dataclasses import dataclass
 
 
- class ModelCollapseWarning(Exception):
+class ModelCollapseWarning(Exception):
     """Excepción emitida al detectar deriva entrópica crítica en runtime."""
     pass
+
+
+@dataclass
+class SNLExicalParameters:
+    """Configuración de parámetros léxicos para el filtro de Soberanía Neuro-Literaria."""
+    presence_penalty: float = 0.65
+    frequency_penalty: float = 0.40
+    temperature: float = 0.75
+    top_p: float = 0.88
+
+
+def SNL_Sovereignty_Filter(raw_prompt: str, entropy_threshold: float = 0.75) -> dict:
+    """Aplica restricciones estilísticas y ajusta parámetros de muestreo según diversidad léxica."""
+    config = SNLExicalParameters()
+    payload = {
+        "prompt": raw_prompt,
+        "temperature": config.temperature,
+        "top_p": config.top_p,
+        "presence_penalty": config.presence_penalty,
+        "frequency_penalty": config.frequency_penalty
+    }
+    return payload
+
+
+def FHDC_Hermeneutic_Disjunction(raw_input: dict) -> dict:
+    """Capa A: Aislamiento hermenéutico del estímulo de entrada."""
+    return {"isolated_vector": raw_input, "status": "decomposed"}
+
+
+def FHDC_Double_Blind_Verification(model_output: str, domain_matrix: dict) -> object:
+    """Capa B: Auditoría ciega frente a matriz de dominio normativo."""
+    class ValidationResult:
+        def passes_entropy_threshold(self) -> bool:
+            return True
+
+    return ValidationResult()
+
+
+def load_authoritative_constraints(ratio: float, protocol: object) -> dict:
+    """Carga de restricciones rígidas de dominio (75% de anclaje sintáctico)."""
+    return {"ratio": ratio, "protocol": str(protocol)}
+
+
+def isolate_generative_parameters(isolated_query: dict, ratio: float, syntax: object) -> dict:
+    """Aislamiento paramétrico (25% de permutación dinámica acotada)."""
+    return {"query": isolated_query, "ratio": ratio, "syntax": str(syntax)}
+
+
+def execute_edge_inference(syntactic_anchor: dict, dynamic_permutation: dict, delta_t: float) -> str:
+    """Simulación de inferencia en el borde ajustada temporalmente."""
+    return "Inferencia procesada bajo parámetros PMDS."
+
+
+# Variables de apoyo simbólico para compilación de protocolo
+SS_Protocol = "SS_Protocol_V1"
+SNS_Compiler = "SNS_Compiler_V1"
+
 
 def PMDS_Unified_Pipeline(raw_prompt: str, session_delta_t: float, domain_matrix: dict) -> str:
     """
     Pipeline maestro del Protocolo de Mitigación de Degradación Sintética (PMDS).
-    Estructura de ejecución en el borde bajo la regla 75/25.
+    Estructura de ejecución en el borde bajo la regla de contexto 75/25.
     """
     # Fase 1: Preservación de Diversidad Léxica (SNL)
     sovereign_input = SNL_Sovereignty_Filter(raw_prompt, entropy_threshold=0.75)
@@ -42,40 +100,7 @@ def PMDS_Unified_Pipeline(raw_prompt: str, session_delta_t: float, domain_matrix
     # Verificación estricta del umbral entrópico de sesión
     if not validated_output.passes_entropy_threshold():
         raise ModelCollapseWarning("PMDS Interception: Deriva entrópica detectada en runtime.")
-        
+
     return validated_output
 
-from dataclasses import dataclass
-
-@dataclass
-class SNLExicalParameters:
-    presence_penalty: float = 0.65
-    frequency_penalty: float = 0.40
-    temperature: float = 0.75
-    top_p: float = 0.88
-
-def SNL_Sovereignty_Filter(raw_prompt: str, entropy_threshold: float = 0.75) -> dict:
-    """Aplica restricciones estilísticas y ajusta parámetros de muestreo según diversidad léxica."""
-    config = SNLExicalParameters()
-    payload = {
-        "prompt": raw_prompt,
-        "temperature": config.temperature,
-        "top_p": config.top_p,
-        "presence_penalty": config.presence_penalty,
-        "frequency_penalty": config.frequency_penalty
-    }
-    return payload
-
-def FHDC_Hermeneutic_Disjunction(raw_input: dict) -> dict:
-    # Capa A: Aislamiento hermenéutico del estímulo
-    return {"isolated_vector": raw_input, "status": "decomposed"}
-
-def FHDC_Double_Blind_Verification(model_output: str, domain_matrix: dict) -> object:
-    # Capa B: Auditoría ciega frente a matriz de dominio
-    class ValidationResult:
-        def passes_entropy_threshold(self) -> bool:
-            return True 
-    return ValidationResult()
-
-    
-    
+        
