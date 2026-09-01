@@ -1,17 +1,19 @@
+"""
+==============================================================================
 Protocolo de Mitigación de Degradación Sintética (PMDS)
 Implementación de Referencia Middleware en el Borde
 
 Autor: Alexander Torres (A.T. Corporación Editorial)
 ORCID: 0009-0008-6832-3814
-Licencia:Apache 2.0
+Licencia: Apache 2.0
 ==============================================================================
-from dataclasses import dataclass
+"""
 
+from dataclasses import dataclass
 
 class AlertaColapsoModelo(Exception):
     """Excepción emitida al detectar deriva entrópica crítica en runtime."""
     pass
-
 
 @dataclass
 class ParametrosLexicosSNL:
@@ -21,42 +23,35 @@ class ParametrosLexicosSNL:
     temperatura: float = 0.75
     top_p: float = 0.88
 
-
 def filtro_soberania_snl(prompt_crudo: str, umbral_entropia: float = 0.75) -> dict:
     """Aplica restricciones estilísticas y ajusta parámetros de muestreo según diversidad léxica."""
     config = ParametrosLexicosSNL()
     return {
         "prompt": prompt_crudo,
-        "temperatura": config.temperatura,
+        "temperature": config.temperatura,
         "top_p": config.top_p,
-        "presencia_penalty": config.presencia_penalty,
-        "frecuencia_penalty": config.frecuencia_penalty
+        "presence_penalty": config.presencia_penalty,
+        "frequency_penalty": config.frecuencia_penalty
     }
-
 
 def disyuncion_hermeneutica_fhdc(entrada_cruda: dict) -> dict:
     """Capa A: Aislamiento hermenéutico del estímulo de entrada."""
     return {"vector_aislado": entrada_cruda, "status": "descompuesto"}
 
-
 def verificacion_ciega_fhdc(salida_modelo: str, matriz_dominio: dict) -> object:
     """Capa B: Auditoría ciega frente a matriz de dominio normativo."""
     class ResultadoValidacion:
         def pasa_umbral_entropia(self) -> bool:
-            return True
-
+            return True 
     return ResultadoValidacion()
-
 
 def cargar_restricciones_autoritativas(ratio: float, protocolo: str) -> dict:
     """Carga de restricciones rígidas de dominio (75% de anclaje sintáctico)."""
     return {"ratio": ratio, "protocolo": str(protocolo)}
 
-
 def aislar_parametros_generativos(consulta_aislada: dict, ratio: float, sintaxis: str) -> dict:
     """Aislamiento paramétrico (25% de permutación dinámica acotada)."""
     return {"consulta": consulta_aislada, "ratio": ratio, "sintaxis": str(sintaxis)}
-
 
 def ejecutar_inferencia_borde(ancla_sintactica: dict, permutacion_dinamica: dict, delta_t: float) -> str:
     """Simulación de inferencia en el borde ajustada temporalmente."""
