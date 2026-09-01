@@ -15,7 +15,7 @@ Implementación modular en Python de los sistemas de sincronización semántica,
 
 ## Estructura del Pipeline Unificado
 
-class ModelCollapseWarning(Exception):
+```class ModelCollapseWarning(Exception):
     """Excepción emitida al detectar deriva entrópica crítica en runtime."""
     pass
 
