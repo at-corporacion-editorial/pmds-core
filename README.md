@@ -103,7 +103,7 @@ Para citar el marco conceptual, el marco teóríco o el Libro Blanco (White Pape
   title     = {PMDS: Arquitectura Middleware en el Borde para la Sincronización Neuro-Semántica y Mitigación de Degradación Sintética en Modelos de Frontera},
   journal   = {Zenodo Preprint},
   year      = {2026},
-  doi       = {10.5281/zenodo.XXXXXXX},
+  doi       = {https://doi.org/10.5281/zenodo.22226756},
   publisher = {A.T. Corporación Editorial}
 }
 ```
